@@ -1,0 +1,18 @@
+$scaleVmin: 1.4vmin;
+
+@mixin dflex($direction, $justifyContent: flex-start, $alignItem: flex-start) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justifyContent;
+  align-items: $alignItem;
+}
+
+@mixin heightScale($size) {
+  height: calc(#{$size} + #{$scaleVmin});
+}
+@mixin widthScale($size) {
+  width: calc(#{$size} + #{$scaleVmin});
+}
+@mixin fontSizeScale($size) {
+  font-size: calc(#{$size} + #{$scaleVmin});
+}

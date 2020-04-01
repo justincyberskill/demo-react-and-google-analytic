@@ -1,0 +1,51 @@
+@import './assets/styles/common';
+
+/* ------ Header - Start ------ */
+.header {
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgb(41, 52, 65);
+}
+
+.headerTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gaLogo {
+  @include heightScale(20px);
+}
+
+.reactLogo {
+  @include heightScale(28px);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .reactLogo {
+    animation: react-logo-animation-spin infinite 20s linear;
+  }
+}
+
+@keyframes react-logo-animation-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.vs {
+  color: white;
+  font-size: calc(12px + 1vmin);
+  font-weight: 300;
+  margin: 0 12px;
+}
+/* ------ Header - End ------ */
+
+.body {
+  padding: 1rem;
+}

@@ -1,0 +1,26 @@
+@import '../../assets/styles/common';
+
+.navbar {
+  @include dflex('row');
+
+  .navItem {
+    cursor: pointer;
+    padding: 6px 12px;
+    background: #f8f8f84d;
+    color: white;
+    font-size: 12px;
+    transition: 100ms linear;
+    text-decoration: none;
+
+    &:hover {
+      background: #f8f8f881;
+    }
+  }
+}
+
+.content {
+  margin-top: 12px;
+  font-size: 14px;
+  color: white;
+  font-weight: 300;
+}

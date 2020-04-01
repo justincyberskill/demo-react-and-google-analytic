@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
+import PageviewSection from './components/section-pageview'
+
+// ------ Styling import ------
+import SVGGoogleAnalytic from 'assets/svgs/google-analytic.svg'
+import SVGReact from 'assets/svgs/react.svg'
+import styles from './App.module.scss'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <div className={styles.headerTitle}>
+            <img
+              src={SVGGoogleAnalytic}
+              alt="Google Analytic"
+              className={styles.gaLogo}
+            />
+            <span className={styles.vs}>+</span>
+            <img src={SVGReact} alt="ReactJS" className={styles.reactLogo} />
+          </div>
+        </div>
+      </div>
+      {/* --- Body start --- */}
+      <div className={styles.body}>
+        <PageviewSection />
+      </div>
+      {/* --- Body end   --- */}
+    </Router>
+  )
 }
 
-export default App;
+export default App
