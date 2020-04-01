@@ -7,7 +7,7 @@ export function usePageViews() {
   // Location just available when usePageViews stay inside the React-Router's component
   let { pathname } = useLocation()
   useEffect(() => {
-    ReactGa.initialize(GA.ID)
+    ReactGa.initialize(GA.TRACKING_ID)
   }, [])
   useEffect(() => {
     ReactGa.pageview(pathname)

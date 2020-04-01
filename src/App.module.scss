@@ -1,5 +1,10 @@
 @import './assets/styles/common';
 
+.container {
+  @include dflex(column, flex-start, stretch);
+  min-height: 100vh;
+}
+
 /* ------ Header - Start ------ */
 .header {
   padding: 12px;
@@ -48,4 +53,24 @@
 
 .body {
   padding: 1rem;
+  flex-grow: 1;
+}
+
+.alert {
+  width: 100vw;
+  flex-grow: 1;
+  @include dflex(column, center, center);
+
+  &Message {
+    @include fontSizeScale(14px);
+    color: rgba(255, 255, 255, 0.548);
+    margin-bottom: 6px;
+    font-weight: 500;
+  }
+
+  &SubMessage {
+    @include fontSizeScale(8px);
+    color: rgb(189, 51, 51);
+    font-weight: 300;
+  }
 }

@@ -1,4 +1,4 @@
-$scaleVmin: 1.4vmin;
+$scaleVmin: 1vmin;
 
 @mixin dflex($direction, $justifyContent: flex-start, $alignItem: flex-start) {
   display: flex;
